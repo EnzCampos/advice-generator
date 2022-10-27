@@ -1,6 +1,6 @@
 <template>
     <header @click="$emit('toggleDarkMode')">
-        <p>{{darkmode ? "Light Mode" : "Dark Mode"}}</p>
+        <p>{{darkmode == "dark" ? "Light Mode" : "Dark Mode"}}</p>
     </header>
 </template>
 
@@ -16,6 +16,7 @@ export default {
 <style scoped>
 
 header {
+    margin-top: -50px;
     padding-left: 15px;
     padding-right: 15px;
     color: var(--text-color);

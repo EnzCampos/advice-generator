@@ -24,7 +24,7 @@ export default {
     return {
       advice: '',
       id: '',
-      darkmode: true
+      darkmode: localStorage.getItem("user-theme") ? localStorage.getItem("user-theme") : localStorage.setItem("user-theme", "dark")
     }
   },
 
@@ -38,7 +38,9 @@ export default {
   },
   methods: {
     toggleDarkMode() {
-      this.darkmode = !this.darkmode
+      this.darkmode = localStorage.getItem("user-theme") == "dark" ? 'light' : 'dark';
+      localStorage.setItem('user-theme', this.darkmode);
+      document.documentElement.className = this.darkmode;
     },
 
     async generateNewAdvice() {
@@ -58,12 +60,14 @@ export default {
   --background-color: hsl(218, 23%, 16%);
   --text-color: white;
   --elements-color: hsl(217, 19%, 24%);
+  --neon-color: hsl(150, 100%, 66%);
 }
 
-:root.light-theme {
+:root.light {
   --background-color: white;
-  --elements-color: ;
-  --text-color: black;
+  --elements-color: hsl(217, 62%, 95%);
+  --text-color: rgb(80, 80, 80);
+  --neon-color: hsl(283, 96%, 73%);
 }
 
 #app {

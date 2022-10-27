@@ -16,10 +16,9 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .advice-div {
-  background-color: hsl(217, 19%, 24%);
+  background-color: var(--elements-color);
   width: 20%;
   padding: 30px;
   border-radius: 15px;
@@ -28,10 +27,13 @@ export default {
   align-items: center;
 }
 h2 {
-  color: var(--text-color)
+  margin-top: 0px;
+  color: var(--text-color);
+  font-size: 18px;
 }
 p {
-  color: hsl(150, 100%, 66%)
+  margin-top: -10px;
+  color: var(--neon-color)
 }
 .img-divider {
   margin-top: 15px;
@@ -46,14 +48,14 @@ p {
   top: 55px;
   width: 20px;
   height: 20px;
-  border: 15px solid hsl(150, 100%, 66%);
+  border: 15px solid var(--neon-color);
   border-radius: 50%;
 }
 .dice {
   width: 20px;
-  background-color: hsl(150, 100%, 66%);
+  background-color: var(--neon-color);
 }
 .dice-div:hover {
-  box-shadow: 0px 0px 15px 5px hsl(150, 100%, 66%);
+  box-shadow: 0px 0px 15px 5px var(--neon-color);
 }
 </style>
