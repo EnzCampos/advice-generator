@@ -1,4 +1,4 @@
-# hAdvice Generator Project
+# Advice Generator Project
 
 ## Built using Vue JS
 ```
